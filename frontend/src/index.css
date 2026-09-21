@@ -1,0 +1,183 @@
+@import "tailwindcss";
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/geist-mono";
+@import "@fontsource-variable/source-serif-4";
+
+@theme {
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --font-serif: "Source Serif 4 Variable", "Iowan Old Style", Georgia, serif;
+
+  /* Surfaces & ink */
+  --color-canvas: #f6f4ef;
+  --color-surface: #fffdf9;
+  --color-sunken: #f0ede6;
+  --color-hover: #ece8df;
+  --color-line: #e6e1d7;
+  --color-line-strong: #d6cfc1;
+  --color-ink: #1e1d1a;
+  --color-ink-2: #55524b;
+  --color-ink-3: #847f75;
+  --color-ink-4: #b3ada2;
+
+  /* Accent - muted amber/orange, used for thresholds and primary emphasis */
+  --color-accent: #c4622d;
+  --color-accent-strong: #a9521f;
+  --color-accent-soft: #f6e8dd;
+  --color-accent-ink: #8f4318;
+
+  /* Decode statuses (validated for colour-vision deficiency; always paired with icon + label) */
+  --color-safe: #23865e;
+  --color-safe-ink: #1b6b4a;
+  --color-safe-soft: #e5f1ea;
+  --color-uncertain: #d08b16;
+  --color-uncertain-ink: #8a5a09;
+  --color-uncertain-soft: #faf0dc;
+  --color-ambiguous: #7b56b8;
+  --color-ambiguous-ink: #5e3f95;
+  --color-ambiguous-soft: #efe9f7;
+  --color-rejected: #c24438;
+  --color-rejected-ink: #9a3329;
+  --color-rejected-soft: #f8e6e3;
+  --color-reviewed: #2c6bc0;
+  --color-reviewed-ink: #245595;
+  --color-reviewed-soft: #e4edf8;
+
+  --radius-card: 14px;
+  --shadow-card: 0 1px 0 rgb(30 29 26 / 0.02), 0 1px 3px rgb(30 29 26 / 0.04);
+  --shadow-pop: 0 12px 32px -8px rgb(30 29 26 / 0.18), 0 2px 6px rgb(30 29 26 / 0.06);
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-shimmer: shimmer 1.6s linear infinite;
+  --animate-flow: flow 1.2s linear infinite;
+
+  @keyframes shimmer {
+    from { background-position: -200% 0; }
+    to { background-position: 200% 0; }
+  }
+  @keyframes flow {
+    from { stroke-dashoffset: 12; }
+    to { stroke-dashoffset: 0; }
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--color-accent-soft);
+    color: var(--color-accent-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  button {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: default;
+  }
+}
+
+@utility num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.015em;
+}
+
+@utility hatch {
+  background-image: repeating-linear-gradient(135deg, currentColor 0 1px, transparent 1px 5px);
+}
+
+@utility skeleton {
+  background: linear-gradient(90deg, var(--color-sunken) 25%, var(--color-hover) 50%, var(--color-sunken) 75%);
+  background-size: 200% 100%;
+  animation: var(--animate-shimmer);
+  border-radius: 6px;
+}
+
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-strong) transparent;
+}
+
+/* Range input used by <Slider> - the visible track is drawn by the component. */
+@layer components {
+  .asid-range {
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    margin: 0;
+  }
+  .asid-range:focus-visible {
+    outline: none;
+  }
+  .asid-range::-webkit-slider-runnable-track {
+    height: 20px;
+    background: transparent;
+  }
+  .asid-range::-moz-range-track {
+    height: 20px;
+    background: transparent;
+  }
+  .asid-range::-webkit-slider-thumb {
+    appearance: none;
+    height: 16px;
+    width: 16px;
+    margin-top: 2px;
+    border-radius: 999px;
+    background: var(--color-surface);
+    border: 1.5px solid var(--color-ink);
+    box-shadow: 0 1px 3px rgb(30 29 26 / 0.18);
+    transition: transform 150ms var(--ease-soft), box-shadow 150ms;
+  }
+  .asid-range::-moz-range-thumb {
+    height: 14px;
+    width: 14px;
+    border-radius: 999px;
+    background: var(--color-surface);
+    border: 1.5px solid var(--color-ink);
+    box-shadow: 0 1px 3px rgb(30 29 26 / 0.18);
+  }
+  .asid-range:hover::-webkit-slider-thumb,
+  .asid-range:active::-webkit-slider-thumb {
+    transform: scale(1.12);
+  }
+  .asid-range:focus-visible::-webkit-slider-thumb {
+    box-shadow: 0 0 0 4px rgb(196 98 45 / 0.25);
+  }
+  .asid-range:focus-visible::-moz-range-thumb {
+    box-shadow: 0 0 0 4px rgb(196 98 45 / 0.25);
+  }
+
+  /* Recharts polish */
+  .recharts-surface:focus,
+  .recharts-wrapper:focus,
+  .recharts-sector:focus {
+    outline: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

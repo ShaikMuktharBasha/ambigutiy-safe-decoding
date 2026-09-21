@@ -1,0 +1,181 @@
+ticket_id,subject,message,category,hours_to_resolve,customer_tier
+5001,Sync between devices is broken,Changes I make on desktop don't show up on my phone.,Technical,0.7,Pro
+5002,Need to change delivery address,I need to update the shipping address before the order ships.,Shipping,8.7,Free
+5003,Need a refund for last month,I cancelled my plan but was still billed for last month.,Billing,11.0,Enterprise
+5004,Suggestion for a new feature,It would be great if you added dark mode to the settings.,General,1.3,Enterprise
+5005,Update my username,I'd like to change the display name on my profile.,Account,1.1,Pro
+5006,Page keeps loading forever,The dashboard page spins indefinitely and never finishes loading.,Technical,2.2,Pro
+5007,Need a refund for last month,I cancelled my plan but was still billed for last month.,Billing,7.7,Free
+5008,Partnership inquiry,I'm interested in exploring a partnership opportunity with your company.,General,9.5,Enterprise
+5009,Missing item in my shipment,One of the items I ordered was missing from the box.,Shipping,10.9,Enterprise
+5010,Need to change delivery address,I need to update the shipping address before the order ships.,Shipping,8.3,Enterprise
+5011,Question about your privacy policy,Could you clarify how long user data is retained?,General,8.0,Free
+5012,Two-factor authentication not working,My authenticator app codes are being rejected at login.,Account,1.7,Pro
+5013,Page keeps loading forever,The dashboard page spins indefinitely and never finishes loading.,Technical,18.0,Pro
+5014,Invoice total looks wrong,The invoice I received doesn't match the price shown at checkout.,Billing,2.6,Free
+5015,Getting a 500 error on checkout,I get a server error whenever I try to complete my purchase.,Technical,17.4,Enterprise
+5016,Order delivered to wrong address,My package was delivered to a neighbor's address by mistake.,Shipping,5.0,Enterprise
+5017,Missing item in my shipment,One of the items I ordered was missing from the box.,Shipping,9.7,Free
+5018,Duplicate charge on my card,"I was charged twice for the same order, can you refund one of them?",Billing,9.3,Enterprise
+5019,App crashes on startup,The mobile app closes immediately every time I try to open it.,Technical,8.2,Free
+5020,Update my username,I'd like to change the display name on my profile.,Account,5.3,Pro
+5021,Need a refund for last month,I cancelled my plan but was still billed for last month.,Billing,15.9,Free
+5022,Update my username,I'd like to change the display name on my profile.,Account,4.9,Pro
+5023,Partnership inquiry,I'm interested in exploring a partnership opportunity with your company.,General,11.2,Pro
+5024,Need to change delivery address,I need to update the shipping address before the order ships.,Shipping,8.0,Pro
+5025,Update my username,I'd like to change the display name on my profile.,Account,13.1,Free
+5026,Page keeps loading forever,The dashboard page spins indefinitely and never finishes loading.,Technical,1.8,Enterprise
+5027,How do I contact support by phone,Is there a phone number I can call instead of emailing?,General,2.1,Enterprise
+5028,Billing address needs updating,I moved recently and need to update the address on my invoices.,Billing,13.8,Free
+5029,How do I contact support by phone,Is there a phone number I can call instead of emailing?,General,4.7,Free
+5030,Question about subscription price,Why did my monthly subscription price change without notice?,Billing,4.0,Pro
+5031,Duplicate charge on my card,"I was charged twice for the same order, can you refund one of them?",Billing,8.5,Free
+5032,General feedback about the product,"Overall I really like the product, just wanted to share some thoughts.",General,1.5,Pro
+5033,Need a refund for last month,I cancelled my plan but was still billed for last month.,Billing,20.0,Free
+5034,Change email on file,I no longer have access to my old email and need to update it.,Account,6.8,Free
+5035,Just wanted to say thanks,Your team helped me out last week and I appreciate the quick response.,General,5.1,Enterprise
+5036,App crashes on startup,The mobile app closes immediately every time I try to open it.,Technical,2.3,Enterprise
+5037,Partnership inquiry,I'm interested in exploring a partnership opportunity with your company.,General,7.3,Enterprise
+5038,Export feature is not working,Clicking 'export to CSV' does nothing on my end.,Technical,8.6,Free
+5039,Coupon code did not apply,I entered a discount code at checkout but the full price was charged.,Billing,3.8,Free
+5040,App crashes on startup,The mobile app closes immediately every time I try to open it.,Technical,1.6,Enterprise
+5041,Invoice total looks wrong,The invoice I received doesn't match the price shown at checkout.,Billing,2.8,Enterprise
+5042,Update my username,I'd like to change the display name on my profile.,Account,17.7,Free
+5043,Billing address needs updating,I moved recently and need to update the address on my invoices.,Billing,5.8,Free
+5044,Can't reset my password,"The password reset email never arrives, even after multiple attempts.",Account,1.9,Enterprise
+5045,Cannot log into my account,I keep getting an 'invalid credentials' error even after resetting my password.,Technical,17.4,Pro
+5046,Page keeps loading forever,The dashboard page spins indefinitely and never finishes loading.,Technical,10.9,Free
+5047,Update my username,I'd like to change the display name on my profile.,Account,2.3,Pro
+5048,Tracking number shows no updates,The tracking link hasn't changed status in over a week.,Shipping,2.6,Free
+5049,Getting a 500 error on checkout,I get a server error whenever I try to complete my purchase.,Technical,4.5,Enterprise
+5050,Sync between devices is broken,Changes I make on desktop don't show up on my phone.,Technical,9.4,Free
+5051,Sync between devices is broken,Changes I make on desktop don't show up on my phone.,Technical,3.2,Pro
+5052,Need a refund for last month,I cancelled my plan but was still billed for last month.,Billing,4.5,Enterprise
+5053,General feedback about the product,"Overall I really like the product, just wanted to share some thoughts.",General,6.8,Enterprise
+5054,Can't reset my password,"The password reset email never arrives, even after multiple attempts.",Account,1.9,Pro
+5055,Missing item in my shipment,One of the items I ordered was missing from the box.,Shipping,0.6,Free
+5056,Order delivered to wrong address,My package was delivered to a neighbor's address by mistake.,Shipping,3.6,Enterprise
+5057,Need to merge two accounts,I accidentally created two accounts and would like them merged.,Account,12.0,Enterprise
+5058,Want to delete my account,Please permanently delete my account and all associated data.,Account,11.0,Enterprise
+5059,Can't reset my password,"The password reset email never arrives, even after multiple attempts.",Account,8.2,Pro
+5060,Suggestion for a new feature,It would be great if you added dark mode to the settings.,General,11.2,Pro
+5061,General feedback about the product,"Overall I really like the product, just wanted to share some thoughts.",General,7.3,Free
+5062,Need a refund for last month,I cancelled my plan but was still billed for last month.,Billing,4.0,Enterprise
+5063,Cannot log into my account,I keep getting an 'invalid credentials' error even after resetting my password.,Technical,15.6,Pro
+5064,Two-factor authentication not working,My authenticator app codes are being rejected at login.,Account,2.8,Free
+5065,Cannot log into my account,I keep getting an 'invalid credentials' error even after resetting my password.,Technical,1.8,Enterprise
+5066,Just wanted to say thanks,Your team helped me out last week and I appreciate the quick response.,General,9.2,Free
+5067,Duplicate charge on my card,"I was charged twice for the same order, can you refund one of them?",Billing,4.0,Free
+5068,Tracking number shows no updates,The tracking link hasn't changed status in over a week.,Shipping,7.2,Pro
+5069,Update my username,I'd like to change the display name on my profile.,Account,2.4,Pro
+5070,Just wanted to say thanks,Your team helped me out last week and I appreciate the quick response.,General,4.4,Free
+5071,Invoice total looks wrong,The invoice I received doesn't match the price shown at checkout.,Billing,6.1,Enterprise
+5072,Coupon code did not apply,I entered a discount code at checkout but the full price was charged.,Billing,7.4,Pro
+5073,Need to merge two accounts,I accidentally created two accounts and would like them merged.,Account,3.8,Free
+5074,Sync between devices is broken,Changes I make on desktop don't show up on my phone.,Technical,0.5,Free
+5075,Sync between devices is broken,Changes I make on desktop don't show up on my phone.,Technical,6.2,Free
+5076,Suggestion for a new feature,It would be great if you added dark mode to the settings.,General,15.8,Free
+5077,Want to delete my account,Please permanently delete my account and all associated data.,Account,6.8,Free
+5078,Can't reset my password,"The password reset email never arrives, even after multiple attempts.",Account,9.7,Pro
+5079,Coupon code did not apply,I entered a discount code at checkout but the full price was charged.,Billing,5.8,Enterprise
+5080,Need a refund for last month,I cancelled my plan but was still billed for last month.,Billing,12.8,Free
+5081,Need to change delivery address,I need to update the shipping address before the order ships.,Shipping,5.1,Free
+5082,App crashes on startup,The mobile app closes immediately every time I try to open it.,Technical,25.5,Pro
+5083,Two-factor authentication not working,My authenticator app codes are being rejected at login.,Account,2.9,Enterprise
+5084,Want to delete my account,Please permanently delete my account and all associated data.,Account,12.0,Free
+5085,Two-factor authentication not working,My authenticator app codes are being rejected at login.,Account,7.5,Enterprise
+5086,Cannot log into my account,I keep getting an 'invalid credentials' error even after resetting my password.,Technical,11.4,Pro
+5087,Two-factor authentication not working,My authenticator app codes are being rejected at login.,Account,28.4,Free
+5088,Order delivered to wrong address,My package was delivered to a neighbor's address by mistake.,Shipping,2.8,Enterprise
+5089,App crashes on startup,The mobile app closes immediately every time I try to open it.,Technical,7.4,Pro
+5090,Order delivered to wrong address,My package was delivered to a neighbor's address by mistake.,Shipping,5.2,Pro
+5091,Question about your privacy policy,Could you clarify how long user data is retained?,General,2.9,Pro
+5092,General feedback about the product,"Overall I really like the product, just wanted to share some thoughts.",General,2.6,Free
+5093,Page keeps loading forever,The dashboard page spins indefinitely and never finishes loading.,Technical,3.7,Pro
+5094,Billing address needs updating,I moved recently and need to update the address on my invoices.,Billing,2.1,Pro
+5095,Tracking number shows no updates,The tracking link hasn't changed status in over a week.,Shipping,19.0,Pro
+5096,Want to delete my account,Please permanently delete my account and all associated data.,Account,6.0,Pro
+5097,Update my username,I'd like to change the display name on my profile.,Account,11.1,Free
+5098,Question about subscription price,Why did my monthly subscription price change without notice?,Billing,1.5,Pro
+5099,Question about your privacy policy,Could you clarify how long user data is retained?,General,7.6,Pro
+5100,Cannot log into my account,I keep getting an 'invalid credentials' error even after resetting my password.,Technical,14.8,Free
+5101,Question about your privacy policy,Could you clarify how long user data is retained?,General,12.7,Pro
+5102,Need to merge two accounts,I accidentally created two accounts and would like them merged.,Account,5.3,Enterprise
+5103,Billing address needs updating,I moved recently and need to update the address on my invoices.,Billing,7.6,Enterprise
+5104,Change email on file,I no longer have access to my old email and need to update it.,Account,12.7,Enterprise
+5105,Duplicate charge on my card,"I was charged twice for the same order, can you refund one of them?",Billing,7.0,Enterprise
+5106,Need to change delivery address,I need to update the shipping address before the order ships.,Shipping,7.9,Pro
+5107,App crashes on startup,The mobile app closes immediately every time I try to open it.,Technical,7.1,Enterprise
+5108,Two-factor authentication not working,My authenticator app codes are being rejected at login.,Account,3.2,Pro
+5109,Duplicate charge on my card,"I was charged twice for the same order, can you refund one of them?",Billing,3.2,Enterprise
+5110,Two-factor authentication not working,My authenticator app codes are being rejected at login.,Account,10.6,Pro
+5111,Sync between devices is broken,Changes I make on desktop don't show up on my phone.,Technical,7.9,Free
+5112,Suggestion for a new feature,It would be great if you added dark mode to the settings.,General,7.1,Pro
+5113,Invoice total looks wrong,The invoice I received doesn't match the price shown at checkout.,Billing,4.4,Free
+5114,Coupon code did not apply,I entered a discount code at checkout but the full price was charged.,Billing,1.5,Pro
+5115,How do I contact support by phone,Is there a phone number I can call instead of emailing?,General,13.2,Pro
+5116,Question about subscription price,Why did my monthly subscription price change without notice?,Billing,11.3,Free
+5117,Coupon code did not apply,I entered a discount code at checkout but the full price was charged.,Billing,8.9,Free
+5118,Change email on file,I no longer have access to my old email and need to update it.,Account,22.5,Free
+5119,Billing address needs updating,I moved recently and need to update the address on my invoices.,Billing,12.8,Enterprise
+5120,Export feature is not working,Clicking 'export to CSV' does nothing on my end.,Technical,2.5,Enterprise
+5121,App crashes on startup,The mobile app closes immediately every time I try to open it.,Technical,15.2,Enterprise
+5122,Export feature is not working,Clicking 'export to CSV' does nothing on my end.,Technical,10.7,Pro
+5123,Page keeps loading forever,The dashboard page spins indefinitely and never finishes loading.,Technical,1.5,Free
+5124,Export feature is not working,Clicking 'export to CSV' does nothing on my end.,Technical,8.4,Pro
+5125,Need to change delivery address,I need to update the shipping address before the order ships.,Shipping,5.1,Free
+5126,Cannot log into my account,I keep getting an 'invalid credentials' error even after resetting my password.,Technical,15.2,Free
+5127,Suggestion for a new feature,It would be great if you added dark mode to the settings.,General,10.6,Pro
+5128,How do I contact support by phone,Is there a phone number I can call instead of emailing?,General,14.0,Enterprise
+5129,Need to change delivery address,I need to update the shipping address before the order ships.,Shipping,5.3,Pro
+5130,Page keeps loading forever,The dashboard page spins indefinitely and never finishes loading.,Technical,7.2,Pro
+5131,Package hasn't arrived yet,My order was supposed to arrive three days ago and there's no update.,Shipping,13.8,Free
+5132,Just wanted to say thanks,Your team helped me out last week and I appreciate the quick response.,General,3.7,Enterprise
+5133,Just wanted to say thanks,Your team helped me out last week and I appreciate the quick response.,General,21.3,Free
+5134,Suggestion for a new feature,It would be great if you added dark mode to the settings.,General,3.0,Free
+5135,Page keeps loading forever,The dashboard page spins indefinitely and never finishes loading.,Technical,1.7,Pro
+5136,Billing address needs updating,I moved recently and need to update the address on my invoices.,Billing,12.2,Free
+5137,Want to delete my account,Please permanently delete my account and all associated data.,Account,0.8,Pro
+5138,Getting a 500 error on checkout,I get a server error whenever I try to complete my purchase.,Technical,2.1,Enterprise
+5139,Duplicate charge on my card,"I was charged twice for the same order, can you refund one of them?",Billing,4.5,Enterprise
+5140,Package arrived damaged,The box arrived crushed and the item inside is broken.,Shipping,17.3,Free
+5141,Want to delete my account,Please permanently delete my account and all associated data.,Account,5.0,Free
+5142,General feedback about the product,"Overall I really like the product, just wanted to share some thoughts.",General,7.4,Pro
+5143,Question about subscription price,Why did my monthly subscription price change without notice?,Billing,13.1,Free
+5144,Coupon code did not apply,I entered a discount code at checkout but the full price was charged.,Billing,2.6,Pro
+5145,Question about your privacy policy,Could you clarify how long user data is retained?,General,14.7,Enterprise
+5146,Suggestion for a new feature,It would be great if you added dark mode to the settings.,General,5.1,Free
+5147,How do I contact support by phone,Is there a phone number I can call instead of emailing?,General,10.7,Free
+5148,Suggestion for a new feature,It would be great if you added dark mode to the settings.,General,5.3,Pro
+5149,App crashes on startup,The mobile app closes immediately every time I try to open it.,Technical,1.9,Pro
+5150,Suggestion for a new feature,It would be great if you added dark mode to the settings.,General,6.7,Enterprise
+5151,Can't reset my password,"The password reset email never arrives, even after multiple attempts.",Account,7.1,Pro
+5152,Question about your privacy policy,Could you clarify how long user data is retained?,General,5.0,Pro
+5153,Billing address needs updating,I moved recently and need to update the address on my invoices.,Billing,11.1,Free
+5154,Billing address needs updating,I moved recently and need to update the address on my invoices.,Billing,8.8,Pro
+5155,Duplicate charge on my card,"I was charged twice for the same order, can you refund one of them?",Billing,8.3,Pro
+5156,Question about subscription price,Why did my monthly subscription price change without notice?,Billing,5.3,Pro
+5157,Need to merge two accounts,I accidentally created two accounts and would like them merged.,Account,5.5,Free
+5158,Partnership inquiry,I'm interested in exploring a partnership opportunity with your company.,General,15.8,Free
+5159,Coupon code did not apply,I entered a discount code at checkout but the full price was charged.,Billing,7.7,Free
+5160,Duplicate charge on my card,"I was charged twice for the same order, can you refund one of them?",Billing,5.5,Free
+5161,Can't reset my password,"The password reset email never arrives, even after multiple attempts.",Account,2.9,Pro
+5162,Missing item in my shipment,One of the items I ordered was missing from the box.,Shipping,10.6,Free
+5163,Need a refund for last month,I cancelled my plan but was still billed for last month.,Billing,5.4,Pro
+5164,Billing address needs updating,I moved recently and need to update the address on my invoices.,Billing,3.4,Free
+5165,Question about subscription price,Why did my monthly subscription price change without notice?,Billing,15.4,Pro
+5166,Duplicate charge on my card,"I was charged twice for the same order, can you refund one of them?",Billing,3.4,Enterprise
+5167,Invoice total looks wrong,The invoice I received doesn't match the price shown at checkout.,Billing,9.5,Pro
+5168,Question about your privacy policy,Could you clarify how long user data is retained?,General,7.8,Enterprise
+5169,Export feature is not working,Clicking 'export to CSV' does nothing on my end.,Technical,11.4,Enterprise
+5170,Two-factor authentication not working,My authenticator app codes are being rejected at login.,Account,3.0,Pro
+5171,Missing item in my shipment,One of the items I ordered was missing from the box.,Shipping,5.4,Free
+5172,Need to change delivery address,I need to update the shipping address before the order ships.,Shipping,10.4,Free
+5173,Getting a 500 error on checkout,I get a server error whenever I try to complete my purchase.,Technical,5.0,Pro
+5174,Billing address needs updating,I moved recently and need to update the address on my invoices.,Billing,42.7,Free
+5175,Just wanted to say thanks,Your team helped me out last week and I appreciate the quick response.,General,14.3,Pro
+5176,Cannot log into my account,I keep getting an 'invalid credentials' error even after resetting my password.,Technical,6.1,Pro
+5177,Getting a 500 error on checkout,I get a server error whenever I try to complete my purchase.,Technical,9.2,Free
+5178,Invoice total looks wrong,The invoice I received doesn't match the price shown at checkout.,Billing,9.4,Pro
+5179,How do I contact support by phone,Is there a phone number I can call instead of emailing?,General,6.5,Enterprise
+5180,Order delivered to wrong address,My package was delivered to a neighbor's address by mistake.,Shipping,5.7,Free

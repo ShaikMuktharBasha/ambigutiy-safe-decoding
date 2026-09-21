@@ -1,0 +1,21 @@
+{
+  "name": "ambiguity-safe-inverse-decoding",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Root orchestration scripts for the FastAPI backend and React frontend.",
+  "scripts": {
+    "both": "concurrently -n BACKEND,FRONTEND -c \"blue,magenta\" --kill-others --prefix-colors \"blue,magenta\" \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "dev": "npm run both",
+    "dev:backend": "node scripts/run-backend.js",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "setup": "node scripts/setup-backend.js && npm install --prefix frontend",
+    "setup:backend": "node scripts/setup-backend.js",
+    "setup:frontend": "npm install --prefix frontend",
+    "test:backend": "node scripts/run-backend.js test",
+    "test:frontend": "npm run typecheck --prefix frontend",
+    "build:frontend": "npm run build --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}

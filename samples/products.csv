@@ -1,0 +1,121 @@
+product_id,product_name,product_type,price,region
+1001,Insulated Water Bottle,Sports,19.92,South
+1002,Organic Rolled Oats,Grocery,41.04,East
+1003,Extra Virgin Olive Oil,Grocery,21.73,North
+1004,Mountain Bike Helmet,Sports,102.59,South
+1005,Heated Winter Gloves,Clothing,17.9,North
+1006,Basmati Rice 5kg,Grocery,24.12,South
+1007,Carbon Tennis Racket,Sports,113.44,South
+1008,Portable Blender,Electronics,26.27,West
+1009,USB-C Docking Station,Electronics,144.2,West
+1010,Walnut Bookshelf,Furniture,50.27,West
+1011,Three-Seat Linen Sofa,Furniture,30.64,East
+1012,Yoga Mat,Sports,24.55,East
+1013,Mountain Bike Helmet,Sports,65.88,West
+1014,Wireless Noise-Cancelling Headphones,Electronics,26.95,West
+1015,Rain Jacket,Clothing,36.42,North
+1016,Carbon Tennis Racket,Sports,50.0,North
+1017,Smart Fitness Tracker,Electronics,5.86,North
+1018,Dark Chocolate Bar,Grocery,42.42,East
+1019,Smart Fitness Tracker,Electronics,17.31,North
+1020,Slim-Fit Chinos,Clothing,57.04,East
+1021,Carbon Tennis Racket,Sports,30.41,West
+1022,Walnut Bookshelf,Furniture,14.44,West
+1023,Standing Desk Frame,Furniture,37.78,East
+1024,Three-Seat Linen Sofa,Furniture,16.91,West
+1025,Whey Protein Powder,Grocery,43.53,West
+1026,Oak Dining Table,Furniture,32.89,East
+1027,Compression Running Tights,Sports,13.22,North
+1028,Merino Wool Sweater,Clothing,78.41,North
+1029,Slim-Fit Chinos,Clothing,72.32,West
+1030,Rain Jacket,Clothing,41.18,East
+1031,Heated Winter Gloves,Clothing,112.64,North
+1032,Running Shoes,Sports,28.6,West
+1033,Rain Jacket,Clothing,15.22,East
+1034,Compression Running Tights,Sports,34.95,East
+1035,Dark Chocolate Bar,Grocery,20.83,North
+1036,Dark Chocolate Bar,Grocery,31.86,North
+1037,Extra Virgin Olive Oil,Grocery,37.04,West
+1038,Organic Rolled Oats,Grocery,22.1,West
+1039,Standing Desk Frame,Furniture,135.84,South
+1040,Compression Running Tights,Sports,10.58,South
+1041,Slim-Fit Chinos,Clothing,162.17,South
+1042,Bluetooth Bike Computer,Electronics,49.58,West
+1043,Adjustable Dumbbells,Sports,9.89,South
+1044,Gaming Chair with Speakers,Furniture,7.5,East
+1045,Adjustable Dumbbells,Sports,35.83,South
+1046,Cotton Oxford Shirt,Clothing,55.11,East
+1047,Smart Fitness Tracker,Electronics,32.18,East
+1048,27-inch 4K Monitor,Electronics,121.75,West
+1049,Merino Wool Sweater,Clothing,47.58,East
+1050,27-inch 4K Monitor,Electronics,23.17,West
+1051,Gaming Chair with Speakers,Furniture,27.89,South
+1052,Yoga Leggings,Clothing,105.52,North
+1053,Football Size 5,Sports,51.64,North
+1054,Slim-Fit Chinos,Clothing,86.02,North
+1055,Dark Chocolate Bar,Grocery,32.24,South
+1056,Mountain Bike Helmet,Sports,77.33,South
+1057,Carbon Tennis Racket,Sports,24.29,North
+1058,Organic Rolled Oats,Grocery,79.48,East
+1059,Merino Wool Sweater,Clothing,80.34,South
+1060,Yoga Leggings,Clothing,13.06,West
+1061,Oak Dining Table,Furniture,76.34,North
+1062,Rain Jacket,Clothing,77.93,North
+1063,Folding Camping Chair,Furniture,5.48,South
+1064,Oak Dining Table,Furniture,29.33,West
+1065,Compression Running Tights,Sports,16.87,East
+1066,Wireless Noise-Cancelling Headphones,Electronics,15.26,East
+1067,Mechanical Keyboard,Electronics,57.69,North
+1068,Bluetooth Bike Computer,Electronics,15.02,East
+1069,Football Size 5,Sports,14.89,South
+1070,Extra Virgin Olive Oil,Grocery,18.09,West
+1071,Yoga Mat,Sports,49.69,East
+1072,Bluetooth Bike Computer,Electronics,81.38,North
+1073,Whey Protein Powder,Grocery,36.14,West
+1074,Storage Ottoman,Furniture,71.44,South
+1075,Rain Jacket,Clothing,39.37,North
+1076,Wireless Noise-Cancelling Headphones,Electronics,35.9,East
+1077,Cotton Oxford Shirt,Clothing,19.63,South
+1078,Carbon Tennis Racket,Sports,19.74,North
+1079,Cold Brew Coffee Concentrate,Grocery,121.54,South
+1080,Gaming Chair with Speakers,Furniture,15.7,West
+1081,Yoga Leggings,Clothing,42.18,West
+1082,Oak Dining Table,Furniture,37.89,North
+1083,Football Size 5,Sports,60.18,East
+1084,Yoga Mat,Sports,57.97,South
+1085,Smart LED Desk Lamp,Electronics,97.95,North
+1086,Rain Jacket,Clothing,36.36,South
+1087,Insulated Water Bottle,Sports,172.39,East
+1088,Adjustable Dumbbells,Sports,73.3,East
+1089,Whey Protein Powder,Grocery,3.48,East
+1090,Organic Rolled Oats,Grocery,39.44,North
+1091,27-inch 4K Monitor,Electronics,28.72,East
+1092,Electrolyte Drink Mix,Grocery,49.45,East
+1093,Slim-Fit Chinos,Clothing,144.9,North
+1094,Mechanical Keyboard,Electronics,7.13,West
+1095,Oak Dining Table,Furniture,87.17,West
+1096,Running Shoes,Sports,40.41,West
+1097,Whey Protein Powder,Grocery,29.17,West
+1098,Rain Jacket,Clothing,142.69,West
+1099,Cotton Oxford Shirt,Clothing,34.72,South
+1100,Yoga Mat,Sports,154.85,South
+1101,Extra Virgin Olive Oil,Grocery,38.89,West
+1102,Storage Ottoman,Furniture,34.46,East
+1103,Organic Rolled Oats,Grocery,25.71,South
+1104,Cotton Oxford Shirt,Clothing,40.39,South
+1105,Smart Fitness Tracker,Electronics,29.61,South
+1106,USB-C Docking Station,Electronics,18.29,East
+1107,Cold Brew Coffee Concentrate,Grocery,10.63,East
+1108,Folding Camping Chair,Furniture,62.97,West
+1109,Cotton Oxford Shirt,Clothing,43.48,West
+1110,Walnut Bookshelf,Furniture,55.41,West
+1111,Portable Blender,Electronics,29.01,North
+1112,Gaming Chair with Speakers,Furniture,48.77,North
+1113,Folding Camping Chair,Furniture,13.51,South
+1114,Carbon Tennis Racket,Sports,96.86,East
+1115,Folding Camping Chair,Furniture,46.22,South
+1116,Folding Camping Chair,Furniture,30.66,West
+1117,Heated Winter Gloves,Clothing,10.83,West
+1118,Compression Running Tights,Sports,86.8,East
+1119,Folding Camping Chair,Furniture,16.95,West
+1120,Heated Winter Gloves,Clothing,30.42,North
