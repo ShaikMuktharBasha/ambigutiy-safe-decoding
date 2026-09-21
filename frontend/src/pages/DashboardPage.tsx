@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { ArrowRight, Binary, Inbox, ServerCrash, Sparkles, Upload } from "lucide-react";
 import type { ReactNode } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { ApiConnector } from "@/components/common/ApiConnector";
 import { OutcomeBars, StatusDonut } from "@/components/charts/Charts";
 import { PipelineIncompleteState } from "@/components/common/Guards";
 import { DecisionFlow } from "@/components/decoding/DecisionFlow";
@@ -333,13 +334,15 @@ export function DashboardPage() {
   if (isLoading) return <DashboardSkeleton />;
   if (isError) {
     return (
-      <div className="mx-auto max-w-xl pt-10">
+      <div className="mx-auto max-w-2xl space-y-6 pt-6">
+        <ApiConnector />
+
         <Card>
-          <div className="flex flex-col items-center px-6 py-12 text-center">
-            <ServerCrash className="mb-4 size-6 text-rejected-ink" />
-            <h2 className="text-[15px] font-semibold text-ink">Can't reach the API</h2>
+          <div className="flex flex-col items-center px-6 py-8 text-center">
+            <ServerCrash className="mb-3 size-6 text-rejected-ink" />
+            <h2 className="text-[15px] font-semibold text-ink">Running Locally?</h2>
             <p className="mt-2 text-sm leading-relaxed text-ink-3">
-              Start the FastAPI server, then reload this page:
+              If running on your machine, start the FastAPI server in the terminal:
             </p>
             <code className="num mt-3 rounded-lg bg-sunken px-3 py-2 text-[12.5px] text-ink">
               cd backend && uvicorn app.main:app --reload

@@ -25,8 +25,8 @@ class Settings(BaseSettings):
     environment: Literal["development", "production", "test"] = "development"
     api_prefix: str = "/api"
 
-    # Comma-separated list of allowed browser origins.
-    cors_origins: str = "http://localhost:5173,http://127.0.0.1:5173"
+    # Comma-separated list of allowed browser origins, or * for all
+    cors_origins: str = "*"
 
     # Upload limits
     max_upload_mb: float = Field(default=10.0, gt=0, le=200)
@@ -60,6 +60,8 @@ class Settings(BaseSettings):
 
     @property
     def cors_origin_list(self) -> list[str]:
+        if not self.cors_origins or self.cors_origins.strip() == "*":
+            return ["*"]
         return [origin.strip() for origin in self.cors_origins.split(",") if origin.strip()]
 
     @property

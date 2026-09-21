@@ -96,9 +96,9 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         CORSMiddleware,
         allow_origins=settings.cors_origin_list,
         allow_credentials=False,
-        allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-        allow_headers=["Content-Type", "Accept"],
-        expose_headers=["Content-Disposition"],
+        allow_methods=["*"],
+        allow_headers=["*"],
+        expose_headers=["*"],
     )
     register_error_handlers(app)
     app.include_router(api_router, prefix=settings.api_prefix)

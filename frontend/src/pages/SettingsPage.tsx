@@ -1,5 +1,6 @@
 import { CircleCheck, CircleX, Eye, EyeOff, RotateCcw, Save, Server } from "lucide-react";
 import { useEffect, useState } from "react";
+import { ApiConnector } from "@/components/common/ApiConnector";
 import { DecodeControls } from "@/components/decoding/DecodeControls";
 import { Button } from "@/components/ui/Button";
 import { Card, CardBody, CardHeader } from "@/components/ui/Card";
@@ -290,11 +291,15 @@ export function SettingsPage() {
                   </KeyValue>
                 </>
               )}
+              <div className="border-t border-line pt-3">
+                <div className="mb-2 text-[12.5px] font-medium text-ink">Backend Connection</div>
+                <ApiConnector compact />
+              </div>
               <a
                 href="/api/docs"
                 target="_blank"
                 rel="noreferrer"
-                className="mt-3 inline-block text-[12.5px] text-accent-ink underline decoration-accent/30 underline-offset-4 hover:decoration-accent"
+                className="mt-2 inline-block text-[12.5px] text-accent-ink underline decoration-accent/30 underline-offset-4 hover:decoration-accent"
               >
                 Open interactive API docs
               </a>
