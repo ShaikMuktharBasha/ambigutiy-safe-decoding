@@ -44,13 +44,20 @@ const queryClient = new QueryClient({
     queries: {
       staleTime: 10_000,
       refetchOnWindowFocus: false,
-      retry: (count, error) => !(isApiError(error) && error.status >= 400 && error.status < 500) && count < 1,
+      retry: (count, error) => {
+        if (isApiError(error) && error.status >= 400 && error.status < 500 && error.status !== 408) {
+          return false;
+        }
+        return count < 3;
+      },
+      retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 8000),
     },
   },
   queryCache: new QueryCache({
     onError: (error, query) => {
       // Background queries surface failures inline; only unexpected server errors toast.
       if (query.meta?.silent) return;
+      if (query.state.fetchFailureCount < 3) return;
       if (isApiError(error) && error.status >= 500) notifyError(error);
     },
   }),

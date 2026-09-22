@@ -28,7 +28,13 @@ export function invalidateDataset(client: QueryClient, id: string) {
 }
 
 export function useHealth() {
-  return useQuery({ queryKey: queryKeys.health, queryFn: api.health, refetchInterval: 30_000, retry: 0 });
+  return useQuery({
+    queryKey: queryKeys.health,
+    queryFn: api.health,
+    refetchInterval: 30_000,
+    retry: (count) => count < 3,
+    retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 5000),
+  });
 }
 
 export function useSettings() {

@@ -1,5 +1,6 @@
 import { CircleCheck, CircleX, Eye, EyeOff, RotateCcw, Save, Server } from "lucide-react";
 import { useEffect, useState } from "react";
+import { getApiBase } from "@/api/client";
 import { ApiConnector } from "@/components/common/ApiConnector";
 import { DecodeControls } from "@/components/decoding/DecodeControls";
 import { Button } from "@/components/ui/Button";
@@ -296,7 +297,7 @@ export function SettingsPage() {
                 <ApiConnector compact />
               </div>
               <a
-                href="/api/docs"
+                href={`${getApiBase()}/docs`}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-2 inline-block text-[12.5px] text-accent-ink underline decoration-accent/30 underline-offset-4 hover:decoration-accent"

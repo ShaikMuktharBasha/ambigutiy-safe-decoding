@@ -1,7 +1,13 @@
 import { Globe, Loader2, RefreshCw, Server } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import { getApiBase, getCustomApiBase, resetCustomApiBase, setCustomApiBase } from "@/api/client";
+import {
+  DEFAULT_API_BASE,
+  getApiBase,
+  getCustomApiBase,
+  resetCustomApiBase,
+  setCustomApiBase,
+} from "@/api/client";
 import { Button } from "@/components/ui/Button";
 import { Card, CardBody, CardHeader } from "@/components/ui/Card";
 import { Input } from "@/components/ui/Controls";
@@ -12,7 +18,7 @@ interface ApiConnectorProps {
 }
 
 export function ApiConnector({ onConnected, compact }: ApiConnectorProps) {
-  const [urlInput, setUrlInput] = useState(() => getCustomApiBase());
+  const [urlInput, setUrlInput] = useState(() => getCustomApiBase() || DEFAULT_API_BASE);
   const [testing, setTesting] = useState(false);
   const [statusMsg, setStatusMsg] = useState<string | null>(null);
 
@@ -36,7 +42,7 @@ export function ApiConnector({ onConnected, compact }: ApiConnectorProps) {
 
       const res = await fetch(testEndpoint, {
         headers: { Accept: "application/json" },
-        signal: AbortSignal.timeout(45000),
+        signal: AbortSignal.timeout(60000),
       });
 
       if (!res.ok) {
@@ -66,7 +72,7 @@ export function ApiConnector({ onConnected, compact }: ApiConnectorProps) {
 
   function handleReset() {
     resetCustomApiBase();
-    setUrlInput("");
+    setUrlInput(DEFAULT_API_BASE);
     toast.info("Reset API URL to default");
     window.location.reload();
   }

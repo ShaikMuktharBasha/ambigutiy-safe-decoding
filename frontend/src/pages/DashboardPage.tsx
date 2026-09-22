@@ -1,7 +1,8 @@
 import { motion } from "motion/react";
-import { ArrowRight, Binary, Inbox, ServerCrash, Sparkles, Upload } from "lucide-react";
-import type { ReactNode } from "react";
+import { ArrowRight, Binary, Inbox, Loader2, RefreshCw, ServerCrash, Sparkles, Upload } from "lucide-react";
+import { useEffect, useState, type ReactNode } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { getApiBase } from "@/api/client";
 import { ApiConnector } from "@/components/common/ApiConnector";
 import { OutcomeBars, StatusDonut } from "@/components/charts/Charts";
 import { PipelineIncompleteState } from "@/components/common/Guards";
@@ -312,8 +313,30 @@ function DecodedDashboard({ dataset }: { dataset: DatasetSummary }) {
 }
 
 function DashboardSkeleton() {
+  const [showWakingNotice, setShowWakingNotice] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowWakingNotice(true), 2500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="space-y-5">
+      {showWakingNotice && (
+        <motion.div
+          initial={{ opacity: 0, y: -6 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex items-center gap-3 rounded-xl border border-accent/25 bg-accent-soft/40 px-4 py-3 text-xs text-accent-ink shadow-sm"
+        >
+          <Loader2 className="size-4 shrink-0 animate-spin text-accent" />
+          <div>
+            <span className="font-semibold">Connecting to backend at {getApiBase()}...</span>{" "}
+            <span className="text-ink-3">
+              Render free tier backend instances take ~30–45s to wake up on initial visit. Automatically establishing connection...
+            </span>
+          </div>
+        </motion.div>
+      )}
       <Skeleton className="h-9 w-56" />
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
         {Array.from({ length: 8 }, (_, i) => (
@@ -335,6 +358,25 @@ export function DashboardPage() {
   if (isError) {
     return (
       <div className="mx-auto max-w-2xl space-y-6 pt-6">
+        <div className="flex flex-col gap-3 rounded-xl border border-rejected/25 bg-rejected-soft/30 p-4 text-xs text-ink sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="font-semibold text-rejected-ink">
+              Could not reach backend at <code className="num rounded bg-sunken px-1.5 py-0.5">{getApiBase()}</code>
+            </p>
+            <p className="mt-1 text-ink-3">
+              If the Render instance is waking up from sleep, retry in a few seconds or verify the URL below.
+            </p>
+          </div>
+          <Button
+            size="sm"
+            variant="secondary"
+            onClick={() => window.location.reload()}
+            icon={<RefreshCw className="size-3.5" />}
+          >
+            Retry Connection
+          </Button>
+        </div>
+
         <ApiConnector />
 
         <Card>

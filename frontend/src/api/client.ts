@@ -1,3 +1,4 @@
+export const DEFAULT_API_BASE = "https://asid-backend.onrender.com";
 const STORAGE_KEY = "asid_api_base_url";
 
 export function getCustomApiBase(): string {
@@ -5,7 +6,22 @@ export function getCustomApiBase(): string {
     const stored = window.localStorage.getItem(STORAGE_KEY);
     if (stored && stored.trim()) return stored.trim();
   }
-  return (import.meta.env.VITE_API_BASE_URL ?? "").trim();
+  const envUrl = (import.meta.env.VITE_API_BASE_URL ?? "").trim();
+  if (envUrl) return envUrl;
+
+  // In local development on localhost, default to "" so Vite proxy (/api -> :8000) is used
+  if (typeof window !== "undefined") {
+    const isLocalhost =
+      window.location.hostname === "localhost" ||
+      window.location.hostname === "127.0.0.1" ||
+      window.location.hostname === "0.0.0.0";
+    if (isLocalhost) {
+      return "";
+    }
+  }
+
+  // Deployed / production default
+  return DEFAULT_API_BASE;
 }
 
 export function setCustomApiBase(url: string): void {
@@ -56,11 +72,18 @@ interface ErrorPayload {
 }
 
 async function send(path: string, options: RequestOptions = {}): Promise<Response> {
-  const { json, headers, body, ...rest } = options;
+  const { json, headers, body, signal, ...rest } = options;
   const baseUrl = getApiBase();
+
+  // Create an abort controller with a 60s timeout if no signal is provided, to give cold Render instances time to respond
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 60000);
+
   try {
+    const effectiveSignal = signal || controller.signal;
     return await fetch(`${baseUrl}${path}`, {
       ...rest,
+      signal: effectiveSignal,
       headers: {
         Accept: "application/json",
         ...(json !== undefined ? { "Content-Type": "application/json" } : {}),
@@ -68,12 +91,21 @@ async function send(path: string, options: RequestOptions = {}): Promise<Respons
       },
       body: json !== undefined ? JSON.stringify(json) : body,
     });
-  } catch {
+  } catch (err: any) {
+    if (err?.name === "AbortError" || err?.message?.includes("aborted")) {
+      throw new ApiError(
+        `Request to ${baseUrl} timed out. Render backend may still be waking up.`,
+        408,
+        "TIMEOUT",
+      );
+    }
     throw new ApiError(
       `Cannot reach the API at ${baseUrl}. Make sure your FastAPI server is running and accessible.`,
       0,
       "NETWORK_ERROR",
     );
+  } finally {
+    clearTimeout(timeoutId);
   }
 }
 
