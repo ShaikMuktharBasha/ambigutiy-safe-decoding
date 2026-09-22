@@ -5,6 +5,7 @@ import {
   DEFAULT_API_BASE,
   getApiBase,
   getCustomApiBase,
+  normalizeBackendUrl,
   resetCustomApiBase,
   setCustomApiBase,
 } from "@/api/client";
@@ -23,22 +24,13 @@ export function ApiConnector({ onConnected, compact }: ApiConnectorProps) {
   const [statusMsg, setStatusMsg] = useState<string | null>(null);
 
   async function handleConnect(overrideUrl?: string) {
-    const targetUrl = (overrideUrl ?? urlInput).trim();
+    const rawTarget = (overrideUrl ?? urlInput).trim();
+    const clean = normalizeBackendUrl(rawTarget);
     setTesting(true);
     setStatusMsg("Testing connection... (Render free instances may take ~30-45s to wake up)");
 
     try {
-      // Clean base url
-      const clean = targetUrl.replace(/\/+$/, "");
-      const baseWithProtocol = clean
-        ? clean.startsWith("http://") || clean.startsWith("https://")
-          ? clean
-          : `https://${clean}`
-        : "";
-
-      const testEndpoint = baseWithProtocol
-        ? `${baseWithProtocol.endsWith("/api") ? baseWithProtocol : `${baseWithProtocol}/api`}/health`
-        : "/api/health";
+      const testEndpoint = clean ? `${clean}/api/health` : "/api/health";
 
       const res = await fetch(testEndpoint, {
         headers: { Accept: "application/json" },
@@ -52,6 +44,7 @@ export function ApiConnector({ onConnected, compact }: ApiConnectorProps) {
       const data = await res.json();
       if (data && data.status === "ok") {
         setCustomApiBase(clean);
+        setUrlInput(clean);
         toast.success(`Connected to API (v${data.version || "1.0.0"})!`);
         setStatusMsg(null);
         if (onConnected) {

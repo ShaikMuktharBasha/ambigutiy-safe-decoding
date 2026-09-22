@@ -1,13 +1,42 @@
 export const DEFAULT_API_BASE = "https://asid-backend.onrender.com";
 const STORAGE_KEY = "asid_api_base_url";
 
+export function normalizeBackendUrl(raw: string): string {
+  let clean = raw.trim().replace(/\/+$/, "").replace(/\/api$/, "");
+  if (!clean) return "";
+
+  // Strip protocol temporarily to check hostname structure
+  const withoutProto = clean.replace(/^https?:\/\//i, "");
+
+  // If someone entered just a service slug like "asid-backend" without any dots or port, auto-append .onrender.com
+  if (!withoutProto.includes(".") && !withoutProto.includes(":") && !withoutProto.includes("localhost")) {
+    clean = clean.startsWith("http://") || clean.startsWith("https://")
+      ? `${clean}.onrender.com`
+      : `https://${withoutProto}.onrender.com`;
+  }
+
+  // Prepend protocol if missing
+  if (!clean.startsWith("http://") && !clean.startsWith("https://")) {
+    const isLocal = clean.startsWith("localhost") || clean.startsWith("127.0.0.1") || clean.startsWith("0.0.0.0");
+    clean = isLocal ? `http://${clean}` : `https://${clean}`;
+  }
+
+  return clean.replace(/\/+$/, "");
+}
+
 export function getCustomApiBase(): string {
   if (typeof window !== "undefined") {
     const stored = window.localStorage.getItem(STORAGE_KEY);
-    if (stored && stored.trim()) return stored.trim();
+    if (stored && stored.trim()) {
+      const normalized = normalizeBackendUrl(stored);
+      if (normalized !== stored) {
+        window.localStorage.setItem(STORAGE_KEY, normalized);
+      }
+      return normalized;
+    }
   }
   const envUrl = (import.meta.env.VITE_API_BASE_URL ?? "").trim();
-  if (envUrl) return envUrl;
+  if (envUrl) return normalizeBackendUrl(envUrl);
 
   // In local development on localhost, default to "" so Vite proxy (/api -> :8000) is used
   if (typeof window !== "undefined") {
@@ -26,7 +55,7 @@ export function getCustomApiBase(): string {
 
 export function setCustomApiBase(url: string): void {
   if (typeof window !== "undefined") {
-    const clean = url.trim().replace(/\/+$/, "");
+    const clean = normalizeBackendUrl(url);
     if (clean) {
       window.localStorage.setItem(STORAGE_KEY, clean);
     } else {
@@ -42,10 +71,10 @@ export function resetCustomApiBase(): void {
 }
 
 export function getApiBase(): string {
-  const raw = getCustomApiBase().replace(/\/+$/, "");
-  if (!raw) return "/api";
-  const withProtocol = raw.startsWith("http://") || raw.startsWith("https://") ? raw : `https://${raw}`;
-  return withProtocol.endsWith("/api") ? withProtocol : `${withProtocol}/api`;
+  const custom = getCustomApiBase();
+  if (!custom) return "/api";
+  const normalized = normalizeBackendUrl(custom);
+  return `${normalized}/api`;
 }
 
 export class ApiError extends Error {
